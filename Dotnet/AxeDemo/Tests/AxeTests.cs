@@ -18,7 +18,6 @@ namespace Tests
     [TestClass]
     public class AxeTests : BaseSeleniumTest
     {
-
         /// <summary>
         /// Very basic test
         /// </summary>
