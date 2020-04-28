@@ -1,6 +1,6 @@
 1. Install Chrome
 
-2. Imstall npm
+2. Install npm
 
 3. Open a command line and navigate to this folder
 
