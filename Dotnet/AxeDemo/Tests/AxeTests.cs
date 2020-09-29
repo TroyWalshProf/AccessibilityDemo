@@ -27,7 +27,7 @@ namespace Tests
             // Get to home page
             LoginPageModel page = new LoginPageModel(this.TestObject);
             page.OpenLoginPage();
-            HomePageModel home = page.LoginWithValidCredentials(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "User"), Config.GetValueForSection(ConfigSection.SeleniumMaqs, "Pass"));
+            HomePageModel home = page.LoginWithValidCredentials(Config.GetGeneralValue("User"), Config.GetGeneralValue("Pass"));
 
             Assert.IsTrue(home.IsPageLoaded(), "Failed to load homepage");
         }
@@ -72,7 +72,7 @@ namespace Tests
         /// Check sub page with report
         /// </summary>
         [TestMethod]
-        public void LoginSubPageWithReport()
+        public void LoginSubPageSubElementWithReport()
         {
             string reportPath = Path.Combine(LoggingConfig.GetLogDirectory(), "LoginSubPageWithReport.html");
 
@@ -101,7 +101,7 @@ namespace Tests
             // Get to home page
             LoginPageModel page = new LoginPageModel(this.TestObject);
             page.OpenLoginPage();
-            page.LoginWithValidCredentials(Config.GetValueForSection(ConfigSection.SeleniumMaqs, "User"), Config.GetValueForSection(ConfigSection.SeleniumMaqs, "Pass"));
+            page.LoginWithValidCredentials(Config.GetGeneralValue("User"), Config.GetGeneralValue("Pass"));
 
             // Setup custom rules
             AxeBuilder builder = new AxeBuilder(WebDriver)

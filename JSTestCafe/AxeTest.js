@@ -10,6 +10,3 @@ test('Automated accessibility testing', async t => {
     const { error, violations } = await axeCheck(t, axeContext, axeOptions);
     await t.expect(violations.length === 0).ok(createReport(violations));
 });
-
-
-//*[@id="iFrameButton"]
